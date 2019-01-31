@@ -1,6 +1,7 @@
 Docker for Shiny Server
 =======================
 
+
 ![](https://img.shields.io/docker/build/rocker/shiny.svg) ![](https://img.shields.io/docker/build/rocker/shiny-verse.svg)
 
 This is a Dockerfile for Shiny Server on Debian stable.  Dockerfiles building on specific versions of R are now available as tags.  These images are based on the corresponding [r-ver](https://hub.docker.com/rocker/r-ver) image.  You can request a specific R version using the appropriate tag, e.g. `rocker/shiny:3.3.2`.    
@@ -23,6 +24,10 @@ To get specific version of R with your shiny image (e.g. 3.4.4):
 ```sh
 docker run --rm -p 3838:3838 rocker/shiny:3.4.4
 ```
+
+## Updates for this Fork
+I have modified the Dockerfile to add GDAL and some R packages needed by a specfic shiny App known as "Sentinel Lanscapes Explorer", see the online version at this [link](http://gsl.icraf.cgiar.org:3838/slExplorer/). This Shiny docker container will be shared with users where internet is slow/not availabel. 
+
 
 ### Developer Notes
 
